@@ -58,7 +58,7 @@ public class PatientValidatorTest extends PersonValidatorTest {
 		validator.validate(pa, errors);
 		assertTrue(errors.hasErrors());
 		assertTrue(errors.hasGlobalErrors());
-    	assertEquals("error.preferredIdentifier", errors.getGlobalError().getCode());
+		assertEquals("error.preferredIdentifier", errors.getGlobalError().getCode());
 	}
 	
 	/**
