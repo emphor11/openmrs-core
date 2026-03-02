@@ -31,7 +31,6 @@ import org.springframework.validation.BindException;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-
 /**
  * Tests methods on the {@link PatientValidator} class.
  */
@@ -121,10 +120,7 @@ public class PatientValidatorTest extends PersonValidatorTest {
 		validator.validate(pa, errors);
 		
 		assertTrue(errors.hasFieldErrors("gender"));
-		assertTrue(
-        errors.getFieldErrors("gender").stream()
-            .anyMatch(e -> "Person.gender.required".equals(e.getCode()))
-    );
+		assertTrue(errors.getFieldErrors("gender").stream().anyMatch(e -> "Person.gender.required".equals(e.getCode())));
 	}
 	
 	/**
